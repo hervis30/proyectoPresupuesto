@@ -1,0 +1,41 @@
+/* estilos de Definir Presupuestos */
+/* eliminacion de margenes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.309);
+}
+
+.IngresarPresupuesto{
+   width: 380px;
+   height: 220px;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   position: relative;
+   top: 60px;
+   border-radius: 20px;
+   box-shadow: 10px;
+}
+.PresupuestoInpunt{
+    margin-top: 30px;
+    width: 80%;
+    height: 40px;
+    border-radius: 19px;
+    padding-left: 10px;
+}
+.BtnGestionar{
+    margin-top: 30px;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
