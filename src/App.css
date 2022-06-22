@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
 /* estilos de Definir Presupuestos */
 /* eliminacion de margenes */
 *{
@@ -5,11 +8,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* fondo de la pantalla */
 body{
     background-color: rgba(0, 0, 0, 0.309);
+    
 }
 
+/* css de la card definir presupuesto */
 .IngresarPresupuesto{
    width: 380px;
    height: 220px;
@@ -22,15 +27,22 @@ body{
    position: relative;
    top: 60px;
    border-radius: 20px;
-   box-shadow: 10px;
+   box-shadow: 5px 8px 40px #000;
+   font-family: 'Roboto', sans-serif;
 }
+/* inpunt de card definir presupuesto */
 .PresupuestoInpunt{
     margin-top: 30px;
     width: 80%;
     height: 40px;
     border-radius: 19px;
+    border: 2px solid #00966B;
+    outline: 0px;
     padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    
 }
+/* Btn de Card definir presupuesto */
 .BtnGestionar{
     margin-top: 30px;
     width: 80%;
@@ -38,4 +50,11 @@ body{
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    background: #00966B;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+.BtnGestionar:hover{
+    background-color: hsla(162, 56%, 16%, 0.855);
+    color: #d4ece5;
 }
