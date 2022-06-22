@@ -1,14 +1,15 @@
-import { useState } from 'react';
 
 import "./App.css";
-import ComponentePrincipal from './components/ComponentePrincipal';
+import DefinePresupuesto from './components/DefinePresupuesto';
 
 function App() {
 
 
   return (
     <div className="App">
-      <ComponentePrincipal />
+      <DefinePresupuesto 
+      placeholder="Digite Presupuesto a Gestionar"
+      />
     </div>
   )
 }
