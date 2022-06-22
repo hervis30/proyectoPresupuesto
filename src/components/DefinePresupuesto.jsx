@@ -5,7 +5,7 @@ const DefinePresupuesto = ({placeholder}) => {
         <div className="IngresarPresupuesto">
             <h2 className="HeaderPresupuesto">Define Presupuesto</h2> 
             <input type="number" className="PresupuestoInpunt" placeholder={placeholder}/>
-            <button type="submit" className='BtnGestionar'>Gestionar</button>
+            <button type="submit" className="BtnGestionar">Gestionar</button>
         </div>
     );
 };
