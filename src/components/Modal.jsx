@@ -6,29 +6,33 @@ const Modal = () => {
 
     const [modal, setModal] = useState(false);
 
+    //funcion para el modal 
     const AbrirModal = () =>{
         setModal(!modal)
     }
-
+    //condicion para el manejo del modal 
     if(modal) {
-        document.body.classList.add('active-modal')
-      } else {
-        document.body.classList.remove('active-modal')
-      }
+        document.body.classList.add("active-modal")
+    } else {
+        document.body.classList.remove("active-modal")
+    }
 
     return (
         <Fragment>
             <div>
-                <button className='BtnModal'
+                
+                <button className="BtnModal"
                     onClick={AbrirModal}
                 >
                 Agregar Gasto
                 </button>
+                
                 {modal && (
                     <div className="modal">
                         <div onClick={AbrirModal} className="overlay"></div>
                         <div className="modal-content">
                             <h2>Agregar Gastos</h2>
+                            
                             <form className="FormularioGasto">
                                 <label>Nombre Gasto</label>
                                 <input type="text"
@@ -38,7 +42,7 @@ const Modal = () => {
                                 <input type="number"
                                 className="CantidadGasto"
                                  />
-                                 <label>Categoria</label>
+                                <label>Categoria</label>
                                 <select className='OpcionData'>
                                     <option value="1">Alimentos</option>
                                     <option value="2">Salud</option>
@@ -54,7 +58,10 @@ const Modal = () => {
                             >
                             X
                             </p>
-                            <button type="submit" className="BntAgregarGasto">Agregar Gastos</button>
+                            <button type="submit" 
+                            className="BntAgregarGasto"
+                            >Agregar Gastos
+                            </button>
                         </div>
                     </div>
                 )}
