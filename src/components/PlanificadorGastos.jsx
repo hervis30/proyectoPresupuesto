@@ -5,13 +5,10 @@ import { CircularProgressbar,buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-const PlanificadorGastos = () => {
+const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal}) => {
 
-    //preguntar como llamar este useState desde el componente principal
-    const[pruebaPresupuesto,setPruebaPresupuesto]= useState(4000000);
-    const[calcularPorcentaje,setCalcularPorcentaje]=useState(100);
-    const[abrirModal,setAbrirModal]=useState(false);
 
+    
   return (
     <>
         <div className="planificadorPadre">
@@ -43,7 +40,8 @@ const PlanificadorGastos = () => {
                 </div>
                 <div className="botones">
                     <div className="botonAgregar">
-                        <button className='abrirModal'onClick={()=>{setAbrirModal(true)}}><span>Agregar Gasto</span></button>
+                        <button className="abrirModal" onClick={()=>{setAbrirModal(true)}}><span>Agregar Gasto</span></button>
+                        
                     </div>
                 </div>
             </div>

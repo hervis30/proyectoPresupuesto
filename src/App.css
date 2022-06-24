@@ -1,0 +1,13 @@
+.modal {
+    background-color: #00966B;
+    height: 500px;
+    width: 500px;
+    display: none;
+
+}
+
+.modal-abierto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
