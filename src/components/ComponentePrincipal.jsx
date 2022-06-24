@@ -8,7 +8,7 @@ const ComponentePrincipal = () => {
     
     const[pruebaPresupuesto,setPruebaPresupuesto]= useState(4000000);
     const[calcularPorcentaje,setCalcularPorcentaje]=useState(100);
-    const[abrirModal,setAbrirModal]=useState(true);
+    const[abrirModal,setAbrirModal]=useState(false);
 
 
     return (
