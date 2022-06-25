@@ -12,3 +12,16 @@
     justify-content: center;
     align-items: center;
 }
+/*-----Validacion formulario------*/
+.error {
+    color: red;
+    margin-left: 15px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.invalid {
+    border: 2px solid red;
+}
