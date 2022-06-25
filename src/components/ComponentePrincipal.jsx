@@ -10,7 +10,6 @@ const ComponentePrincipal = () => {
     const[calcularPorcentaje,setCalcularPorcentaje]=useState(100);
     const[abrirModal,setAbrirModal]=useState(false);
 
-
     return (
         <>
         <PlanificadorGastos
@@ -19,7 +18,7 @@ const ComponentePrincipal = () => {
             setAbrirModal={setAbrirModal}
         />
         <Modal
-            estaAbierto={abrirModal}
+            abrirModal={abrirModal}
         />
        
         </>
