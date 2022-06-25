@@ -51,4 +51,4 @@ const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal}
   )
 }
 
-export default PlanificadorGastos
+export default PlanificadorGastos;

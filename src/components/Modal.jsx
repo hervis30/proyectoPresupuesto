@@ -1,12 +1,12 @@
 import React from 'react'
 import "../App.css/"
-const Modal = ({abrirModal,setAbrirModal}) => {
+const Modal = ({estaAbierto,setAbrirModal}) => {
     
   return (
-    <div className={`modal ${abrirModal && "modal-abierto"}`}>
+    <div className={`modal ${estaAbierto && "modal-abierto"}`}>
         <div className="modalContenido">
             <form >
-                <button className="cerrarModal" onClick={()=>{setAbrirModal(false)}}><span> X </span></button>
+                <button className="cerrarModal" onClick={()=>{setAbrirModal(false)}}><span>X</span></button>
                 <h2>Agregar Gasto</h2>
                 <h5>Nombre Gasto</h5>
                 <input type="text" />
@@ -31,3 +31,4 @@ const Modal = ({abrirModal,setAbrirModal}) => {
 }
 
 export default Modal
+
