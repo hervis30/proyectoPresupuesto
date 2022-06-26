@@ -5,11 +5,15 @@ import PlanificadorGastos from "./PlanificadorGastos";
 import Modal from "./Modal";
 
 const ComponentePrincipal = () => {
-    
+    //Componentes para abrir modal
     const[pruebaPresupuesto,setPruebaPresupuesto]= useState(4000000);
     const[calcularPorcentaje,setCalcularPorcentaje]=useState(100);
     const[abrirModal,setAbrirModal]=useState(false);
 
+    //Para almacenar los inputs de formulario
+    const[nombreGasto,setNombreGasto]=useState("");
+    const[cantidadGasto,setCantidadGastos]=useState(0);
+    const[categoria,setCategoria]=useState("");
 
     return (
         <>
@@ -19,7 +23,12 @@ const ComponentePrincipal = () => {
             setAbrirModal={setAbrirModal}
         />
         <Modal
-            estaAbierto={abrirModal}
+            abrirModal={abrirModal}
+            setAbrirModal={setAbrirModal}
+
+            setNombreGasto={setNombreGasto}
+            setCantidadGasto={setCantidadGastos}
+            setCategoria={setCategoria}
         />
        
         </>
