@@ -6,11 +6,13 @@ import React, { useState } from "react";
 import PlanificadorGastos from "./PlanificadorGastos";
 import Modal from "./Modal";
 import CalcularPresupuesto from "./CalcularPresupuesto";
+import IngresoPresupuesto from "./IngresoPresupuesto";
 
 const ComponentePrincipal = () => {
 
     //Componentes para abrir modal
-    const [pruebaPresupuesto, setPruebaPresupuesto] = useState(100000);
+    const [pruebaPresupuesto, setPruebaPresupuesto] = useState(0);
+    const [irPruebaPresupuesto, setIrPruebaPresupuesto] = useState(false);
     const [calcularPorcentaje, setCalcularPorcentaje] = useState(100);
     const [abrirModal, setAbrirModal] = useState(false);
 
@@ -34,6 +36,12 @@ const ComponentePrincipal = () => {
         <>
         
             {/* Llamado de los componentes */}
+            <IngresoPresupuesto
+                pruebaPresupuesto={pruebaPresupuesto}
+                setPruebaPresupuesto={setPruebaPresupuesto}
+                irPruebaPresupuesto={irPruebaPresupuesto}
+                setIrPruebaPresupuesto={setIrPruebaPresupuesto}
+            />
 
             <PlanificadorGastos
                 pruebaPresupuesto={pruebaPresupuesto}
@@ -69,6 +77,7 @@ const ComponentePrincipal = () => {
                 calcularPorcentaje={calcularPorcentaje}
                 setCalcularPorcentaje={setCalcularPorcentaje}
             />
+            
 
         </>
     )

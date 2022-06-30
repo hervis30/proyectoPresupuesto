@@ -55,21 +55,21 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
 
           {/*Code del campo para seleecionar la categoria del gasto */}
           <h5>Categoria</h5>
-          <select /*className={`form-input ${errors.categoria && "invalid"} `} name="" id=""
+          <select className={`form-input ${errors.categoria && "invalid"} `} name="" id=""
             {...register("categoria", { required: "Debe seleccionar un tipo" })}
             onKeyUp={() => {
               trigger("nombreCategoria");
-            }} */ >
+            }}  >
             <option value=""></option>
-            <option value="">Alimentacion</option>
-            <option value="">Salud</option>
-            <option value="">Servicios</option>
-            <option value="">Gasolina</option>
-            <option value="">Netflix</option>
-            <option value="">Vacaciones</option>
-            <option value="">Hogar</option>
+            <option value="alimentacion">Alimentacion</option>
+            <option value="salud">Salud</option>
+            <option value="servicios">Servicios</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="netflix">Netflix</option>
+            <option value="vacaciones">Vacaciones</option>
+            <option value="hogar">Hogar</option>
           </select>
-          {/*errors.categoria && (<small>{errors.categoria.message}</small>)*/}
+          {errors.categoria && (<small>{errors.categoria.message}</small>)}
 
           <button className='boton' type='submit' value='Enviar'>Agregar Gasto</button>
 
