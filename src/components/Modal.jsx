@@ -72,7 +72,7 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
           </select>
           {errors.categoria && (<small>{errors.categoria.message}</small>)}
               
-          <button className='boton' type='submit' value='Enviar'>Agregar Gasto</button>
+          <button className='boton' type='submit' value='Enviar' onClick={() => { setAbrirModal(false) }}>Agregar Gasto</button>
 
         </form>
       </div>

@@ -19,7 +19,7 @@ const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal,
                     <div style={{ width: 350, height: 350 }}>
                         <CircularProgressbar
                             value={calcularPorcentaje}
-                            text={`${calcularPorcentaje.toFixed(2)}% Gastado`}
+                            text={`${calcularPorcentaje}% Gastado`}
                             backgroundPadding={6}
                             strokeWidth={12}
                             styles={buildStyles({
