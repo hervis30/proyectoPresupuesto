@@ -1,10 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*pendiente colocar font family*/
+
+
+body {
+    /*background, pendiente conciliar color definitivo con el team. */
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+}
+
+/*--- planificador de gastos--- */
+.planificador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planificador h1 {
+    text-align: center;
+    color: #F9F2EC;
+    margin-top: 21px;
+
+}
+
+.grafica {
+    width: 950px;
+    height: 500px;
+    justify-content: center;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: #F9F2EC;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.totalPresupuesto {
+    font-family: Arial, Helvetica, Verdana;
+    width: 96%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+}
+
+.totalPresupuesto h4 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.totalPresupuesto p {
+    font-size: 35px;
+}
+
+.botones {
+    margin-top: 30px;
+    width: 1000px;
+    height: 90px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    justify-items: center;
+    align-items: center;
+}
+
+.agregar {
+    background-color: #00966B;
+    height: 65%;
+    width: 90%;
+    border-radius: 50px;
+    color: #F9F2EC;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.agregar:hover {
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+
+.reset {
+    background-color: #DB2D2D;
+    height: 65%;
+    width: 84%;
+    border-radius: 50px;
+    color: #F9F2EC;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.reset:hover {
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+    /*---termina planificador de gastos---*/
+}
+
 /*modal estilos*/
 .modal {
     background-color: #00966B;
     height: 500px;
     width: 500px;
     display: none;
-
 }
 
 .modal-abierto {
@@ -12,6 +113,7 @@
     justify-content: center;
     align-items: center;
 }
+
 /*-----Validacion formulario------*/
 .error {
     color: red;
