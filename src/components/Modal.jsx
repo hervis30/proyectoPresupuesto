@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../App.css/"
 import { useForm } from 'react-hook-form'
 
 const Modal = ({ abrirModal, setAbrirModal, dispible,
    setNombreGasto, setCantidadGastos, setCategoria, cantidadGasto, setGastos, presupuestoGasto }) => {
-
+  
   //Uso de biblioteca useForm para validacion
   const { register, handleSubmit, watch, formState: { errors }, trigger } = useForm();
   const onSubmit = data => {console.log(data);
-  {presupuestoGasto(data)}
+    { presupuestoGasto(data) }
   }
-
+ 
+  
   return (
     <div className={`modal ${abrirModal && "modal-abierto"}`}>
       <div className="modalContenido">
@@ -18,12 +19,12 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
         <button className="cerrarModal" onClick={() => { setAbrirModal(false) }}><span> X </span></button>
 
         <h2>Agregar Gasto</h2>
-         
-        <form onSubmit={handleSubmit(onSubmit)}>
-          {/*Code del campo para ingresar nombre del gasto */}
-          <h5>Nombre Gasto</h5>
 
-          <input className={`form-input ${errors.nombreGasto && "invalid"} `} type="text" {...register("nombreGasto",
+        <form  onSubmit={handleSubmit(onSubmit)}>
+          {/*Code del campo para ingresar nombre del gasto */}
+          <h5 >Nombre Gasto</h5>
+          
+          <input  className={`form-input ${errors.nombreGasto && "invalid"} `} type="text" {...register("nombreGasto",
             {
               required: "nombre es requerido", pattern: {
                 value: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, message:
@@ -70,7 +71,7 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
             <option value="hogar">Hogar</option>
           </select>
           {errors.categoria && (<small>{errors.categoria.message}</small>)}
-
+              
           <button className='boton' type='submit' value='Enviar'>Agregar Gasto</button>
 
         </form>

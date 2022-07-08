@@ -12,6 +12,7 @@ const IngresoPresupuesto = ({ setPruebaPresupuesto, setIrPruebaPresupuesto }) =>
         
         //reset();
     }
+    
   return (
       <div className="formularioIngresoPresupuesto ">
           
@@ -25,7 +26,7 @@ const IngresoPresupuesto = ({ setPruebaPresupuesto, setIrPruebaPresupuesto }) =>
                           required: "presupuesto es requerido", min: {
                               value: 1, message: "Debe ingresar un numero positivo",
                           }, max: {
-                              value: 1000000000, message: "solo se permiten hasta 100 digitos",
+                              value: 1000000000, message: "solo se permiten hasta 9 digitos",
                           },
                           pattern: {
                               value: /^[0-9]*$/

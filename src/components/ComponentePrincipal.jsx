@@ -25,14 +25,22 @@ const ComponentePrincipal = () => {
     const [gastos, setGastos] = useState([]);
     const [disponible, setDisponible] = useState(0);
     const [gastado, setGastado] = useState(0);
+    
+   //se crea un id unico
+    const idRandom = () => {
+        const random = Math.random().toString(36).substring(2)
+        const fecha = Date.now().toString(36)
+        return random + fecha
+    }
 
     const presupuestoGasto = (gasto) => {
+        gasto.idUnica = idRandom();
         setGastos([...gastos, gasto])
     }
+    
 
     return (
 
-       
         <>
         
             {/* Llamado de los componentes */}
