@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-/*pendiente colocar font family*/
+/*pendiente colocar font family */
 
 
 body {
@@ -100,7 +100,7 @@ body {
     /*---termina planificador de gastos---*/
 }
 
-/*modal estilos*/
+/*estilos de modal*/
 .modal {
     background-color: #00966B;
     height: 500px;
@@ -112,9 +112,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /*fin de estilos de modal*/
 }
 
-/*-----Validacion formulario------*/
+/*-----Validacion formulario de modal y formulario ingresar presupuesto------*/
 .error {
     color: red;
     margin-left: 15px;
@@ -126,4 +127,5 @@ body {
 
 .invalid {
     border: 2px solid red;
+    /*-----termina validacion------*/
 }

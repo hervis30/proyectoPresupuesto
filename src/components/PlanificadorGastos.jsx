@@ -5,11 +5,11 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal, disponible, gastado}) => {
-  
+const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirModal, disponible, gastado }) => {
+
     const { montoIngresado } = pruebaPresupuesto;
     console.log(montoIngresado);
-    
+
     return (
         <div>
             <div className="planificador">
@@ -19,7 +19,7 @@ const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal,
                     <div style={{ width: 350, height: 350 }}>
                         <CircularProgressbar
                             value={calcularPorcentaje}
-                            text={`${calcularPorcentaje}% Gastado`}
+                            text={`${calcularPorcentaje.toFixed(2)}% Gastado`}
                             backgroundPadding={6}
                             strokeWidth={12}
                             styles={buildStyles({
@@ -29,10 +29,8 @@ const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal,
                                 textSize: '10px',
                                 strokeLinecap: 'row',
                             })}
-                            />
-                        </div>
-                </div>
-                
+                        />
+                    </div>
                     <div className="totalPresupuesto">
                         <h4>Total Presupuesto:  </h4>
                         <p>$ {montoIngresado}</p>
@@ -41,15 +39,14 @@ const PlanificadorGastos = ({pruebaPresupuesto,calcularPorcentaje,setAbrirModal,
                         <h4>Gastado: </h4>
                         <p>$ {gastado}</p>
                     </div>
-
                 </div>
                 <div className="botones">
                     <button className="agregar" onClick={() => { setAbrirModal(true) }}>Agregar Gasto</button>
                     <button className="reset">Reset App</button>
                 </div>
-
             </div>
-        
+        </div>
+
     )
 }
 export default PlanificadorGastos;

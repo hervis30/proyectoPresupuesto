@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 
- const CalcularPresupuesto = ({pruebaPresupuesto, gastos, setDisponible, setGastado, setCalcularPorcentaje}) => {
+const CalcularPresupuesto = ({ pruebaPresupuesto, gastos, setDisponible, setGastado, setCalcularPorcentaje }) => {
 
     //Operaciones para el presupuesto dispobile y en uso
 
@@ -9,10 +9,10 @@ import { useEffect, useState } from 'react'
     const { montoIngresado } = pruebaPresupuesto;
     const datoIngresado = (montoIngresado);
 
-  
+
     useEffect(() => { //Con reduce se suman los elementos que hay en el arreglo
         const presupuestoUso = gastos.reduce((total, item) => parseInt(item.cantidadGasto) + total, 0)
-        console.log( presupuestoUso)
+
         {
             presupuestoUso == 0 ? (setDisponible(presupuestoUso)) : (
                 setDisponible(datoIngresado - presupuestoUso)
@@ -20,7 +20,7 @@ import { useEffect, useState } from 'react'
         }
         {
             presupuestoUso == 0 ? (setCalcularPorcentaje(0)) : (
-                setCalcularPorcentaje(((datoIngresado - (datoIngresado - presupuestoUso)) /datoIngresado) * 100));
+                setCalcularPorcentaje(((datoIngresado - (datoIngresado - presupuestoUso)) / datoIngresado) * 100));
         }
         setGastado(presupuestoUso);
     }, [gastos])
