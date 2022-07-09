@@ -44,22 +44,23 @@ const ComponentePrincipal = () => {
         <>
         
             {/* Llamado de los componentes */}
-            <IngresoPresupuesto
-                pruebaPresupuesto={pruebaPresupuesto}
-                setPruebaPresupuesto={setPruebaPresupuesto}
-                irPruebaPresupuesto={irPruebaPresupuesto}
-                setIrPruebaPresupuesto={setIrPruebaPresupuesto}
-            />
-
-            <PlanificadorGastos
-                pruebaPresupuesto={pruebaPresupuesto}
-                calcularPorcentaje={calcularPorcentaje}
-                setAbrirModal={setAbrirModal}
-                setDisponible={setDisponible}
-                disponible={disponible}
-                gastado={gastado}
-                setCalcularPorcentaje={setCalcularPorcentaje}
-            />
+           
+            {irPruebaPresupuesto ?
+                (<PlanificadorGastos
+                    pruebaPresupuesto={pruebaPresupuesto}
+                    calcularPorcentaje={calcularPorcentaje}
+                    setAbrirModal={setAbrirModal}
+                    setDisponible={setDisponible}
+                    disponible={disponible}
+                    gastado={gastado}
+                    setCalcularPorcentaje={setCalcularPorcentaje}
+                />) : (<IngresoPresupuesto
+                    pruebaPresupuesto={pruebaPresupuesto}
+                    setPruebaPresupuesto={setPruebaPresupuesto}
+                    irPruebaPresupuesto={irPruebaPresupuesto}
+                    setIrPruebaPresupuesto={setIrPruebaPresupuesto}
+                />)}
+            
 
             <Modal
                 //Llamdados para abrir modal

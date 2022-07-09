@@ -9,6 +9,7 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
   const { register, handleSubmit, watch, formState: { errors }, trigger } = useForm();
   const onSubmit = data => {console.log(data);
     { presupuestoGasto(data) }
+    setAbrirModal(false);
   }
  
   
@@ -72,7 +73,7 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
           </select>
           {errors.categoria && (<small>{errors.categoria.message}</small>)}
               
-          <button className='boton' type='submit' value='Enviar' onClick={() => { setAbrirModal(false) }}>Agregar Gasto</button>
+          <button className='boton' type='submit' value='Enviar' >Agregar Gasto</button>
 
         </form>
       </div>
