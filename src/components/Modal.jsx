@@ -16,8 +16,9 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
   return (
     <div className={`modal ${abrirModal && "modal-abierto"}`}>
       <div className="modalContenido">
-
-        <button className="cerrarModal" onClick={() => { setAbrirModal(false) }}><span> X </span></button>
+        <div className='titlecloser'>
+          <button className="cerrarModal" onClick={() => { setAbrirModal(false) }}><span> X </span></button>
+        </div>
 
         <h2>Agregar Gasto</h2>
 
@@ -29,7 +30,7 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
             {
               required: "nombre es requerido", pattern: {
                 value: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, message:
-                  "no se permiten numeros, ni caracteres especiales"
+                  "no se permiten numeros"
               }
             })}
             onKeyUp={() => {
@@ -73,7 +74,7 @@ const Modal = ({ abrirModal, setAbrirModal, dispible,
           </select>
           {errors.categoria && (<small>{errors.categoria.message}</small>)}
               
-          <button className='boton' type='submit' value='Enviar' >Agregar Gasto</button>
+          <button className='botonGastos' type='submit' value='Enviar' >Agregar Gasto</button>
 
         </form>
       </div>

@@ -107,31 +107,78 @@ body {
 
 /*estilos de modal*/
 .modal {
-    background-color: #00966B;
-    height: 500px;
-    width: 500px;
+    width: 400px;
+    height: 400px;
     display: none;
+    border-radius: 10px;
+    background-color: #00966bfb;
+    position: absolute;
+    top: 80px;
+    left: 480px; 
 }
 
 .modal-abierto {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:4px 5px 15px;
+
     /*fin de estilos de modal*/
 }
+.botonGastos{
+    width: 200px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    padding-left: 4px;
+}
+.botonGastos:hover{
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+.titlecloser{
+  display: flex;
+  justify-content: flex-end; 
+}
+.titlecloser button{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+small{
+    font-family: 'Roboto', sans-serif ;
+    color: red;
+    font-weight: bold;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Roboto',sans-serif;
+    margin-bottom: 15px;
+}
+h5{
+    font-size: 14px;
+    font-family:'Roboto', sans-serif  ;
+    margin-bottom: 10px;
+}
+
 
 /*-----Validacion formulario de modal y formulario ingresar presupuesto------*/
 .error {
     color: red;
     margin-left: 15px;
-    font-family: 'Inter', sans-serif;
+    
     font-style: italic;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 100;
 }
 
 .invalid {
-    border: 2px solid red;
+    border: 1px solid red;
     /*-----termina validacion------*/
 }
 
@@ -164,7 +211,7 @@ body {
     align-items: center;
 }
 .form-input{
-    width: 350px;
+    width: 200px;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -176,7 +223,7 @@ body {
 
 }
 .botonIngreso{
-    width: 350px;
+    width: 200px;
     height: 40px;
     font-family: 'Roboto', sans-serif;
     border-radius: 8px;
