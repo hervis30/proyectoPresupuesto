@@ -20,9 +20,9 @@ const IngresoPresupuesto = ({ setPruebaPresupuesto, setIrPruebaPresupuesto }) =>
                 <label className="tituloCaja" >Define presupuesto</label>
 
                 <input className={`form-input ${errors.montoIngresado && "invalid"}`} placeholder="Digite Presupuesto" id="presupuesto" type="number"
-
-                    {...register("montoIngresado", {
-                        required: "presupuesto es requerido", min: {
+                    
+                    {...register("montoIngresado",  {
+                        required: "presupuesto es requerido", min:  {
                             value: 1, message: "Debe ingresar un numero positivo",
                         }, max: {
                             value: 1000000000, message: "solo se permiten hasta 9 digitos",

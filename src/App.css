@@ -8,8 +8,8 @@
 
 body {
     /*background, pendiente conciliar color definitivo con el team. */
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    background-color: rgba(204, 199, 199, 0.267);
+    /* background-image: linear-gradient(147deg, #ebe3e344 0%, #434343 74%); */
 }
 
 /*--- planificador de gastos--- */
@@ -21,14 +21,16 @@ body {
 
 .planificador h1 {
     text-align: center;
-    color: #F9F2EC;
+    color: #000;
     margin-top: 21px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 
 }
 
 .grafica {
-    width: 950px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
     justify-content: center;
     margin-top: 40px;
     border-radius: 20px;
@@ -37,6 +39,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    box-shadow: 8px 15px 30px;
 }
 
 .totalPresupuesto {
@@ -51,16 +54,18 @@ body {
 .totalPresupuesto h4 {
     font-size: 40px;
     font-weight: bold;
+    font-size: 20px;
+    font-family:'Roboto', sans-serif ;
 }
 
 .totalPresupuesto p {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .botones {
     margin-top: 30px;
-    width: 1000px;
-    height: 90px;
+    width: 400px;
+    height: 20px;
     display: grid;
     grid-template-columns: 65% 35%;
     justify-items: center;
@@ -69,11 +74,11 @@ body {
 
 .agregar {
     background-color: #00966B;
-    height: 65%;
-    width: 90%;
+    height: 45px;
+    width: 150px;
     border-radius: 50px;
     color: #F9F2EC;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
 }
@@ -85,11 +90,11 @@ body {
 
 .reset {
     background-color: #DB2D2D;
-    height: 65%;
-    width: 84%;
+    height: 45px;
+    width: 150px;
     border-radius: 50px;
     color: #F9F2EC;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
 }
@@ -129,3 +134,60 @@ body {
     border: 2px solid red;
     /*-----termina validacion------*/
 }
+
+/*---- inicion de estilos de ls credencial de ingresar presupuesto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.formularioIngresoPresupuesto{
+    width: 450px;
+    height: 200px;
+    background-color: #F9F2EC; 
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    box-shadow: 8px 15px 30px;
+}
+.tituloCaja{
+    font-size: 30px;
+    font-family:'Roboto', sans-serif ;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.padreFormulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-input{
+    width: 350px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding-left: 4px;
+
+}
+.botonIngreso{
+    width: 350px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #00966B;
+    color: #fff;
+    padding-left: 4px;
+}
+.botonIngreso:hover{
+    background-color: #038661;
+}
+
+

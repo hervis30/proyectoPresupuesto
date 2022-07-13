@@ -16,7 +16,7 @@ const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirMod
                 <h1>Planificador de Gastos</h1>
 
                 <div className="grafica">
-                    <div style={{ width: 350, height: 350 }}>
+                    <div style={{ width: 300, height: 300 }}>
                         <CircularProgressbar
                             value={calcularPorcentaje}
                             text={`${calcularPorcentaje.toFixed(2)}% Gastado`}
@@ -26,7 +26,7 @@ const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirMod
                                 textColor: "#000000",
                                 pathColor: '#00966B',
                                 trailColor: "#d6d6d6",
-                                textSize: '10px',
+                                textSize: '8px',
                                 strokeLinecap: 'row',
                             })}
                         />
