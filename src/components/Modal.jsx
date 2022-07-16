@@ -2,13 +2,13 @@ import React from 'react'
 import "../App.css/"
 import { useForm } from 'react-hook-form'
 
-const Modal = ({ abrirModal, setAbrirModal, dispible,
-   setNombreGasto, setCantidadGastos, setCategoria, cantidadGasto, setGastos, presupuestoGasto }) => {
-  
+const Modal = ({ abrirModal, setAbrirModal,presupuestoGasto}) => {
+    
   //Uso de biblioteca useForm para validacion
   const { register, handleSubmit, watch, formState: { errors }, trigger } = useForm();
-  const onSubmit = data => {console.log(data);
-    { presupuestoGasto(data) }
+  const onSubmit = data => {
+    console.log(data);
+    presupuestoGasto(data) 
     setAbrirModal(false);
   }
  

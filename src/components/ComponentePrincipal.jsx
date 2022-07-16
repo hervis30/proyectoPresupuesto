@@ -7,6 +7,7 @@ import PlanificadorGastos from "./PlanificadorGastos";
 import Modal from "./Modal";
 import CalcularPresupuesto from "./CalcularPresupuesto";
 import IngresoPresupuesto from "./IngresoPresupuesto";
+import PlanificadorCard from "./PlanificadorCard";
 
 const ComponentePrincipal = () => {
 
@@ -86,8 +87,12 @@ const ComponentePrincipal = () => {
                 calcularPorcentaje={calcularPorcentaje}
                 setCalcularPorcentaje={setCalcularPorcentaje}
             />
-            
-
+            <PlanificadorCard
+                setNombreGasto={setNombreGasto}
+                setCantidadGastos={setCantidadGastos}
+                setCategoria={setCategoria}
+            />
+           
         </>
     )
 }

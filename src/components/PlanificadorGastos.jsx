@@ -5,7 +5,9 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirModal, disponible, gastado }) => {
+
+
+const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirModal, disponible, gastado,PlanificadorGastos}) => {
 
     const { montoIngresado } = pruebaPresupuesto;
     console.log(montoIngresado);
@@ -45,8 +47,9 @@ const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirMod
                     <button className="reset">Reset App</button>
                 </div>
             </div>
+            
         </div>
-
+        
     )
 }
 export default PlanificadorGastos;
