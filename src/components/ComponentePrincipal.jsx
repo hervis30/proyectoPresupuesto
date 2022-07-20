@@ -17,12 +17,9 @@ const ComponentePrincipal = () => {
     const [abrirModal, setAbrirModal] = useState(false);
 
     //Para almacenar los inputs de formulario
-    const [nombreGasto, setNombreGasto] = useState("");
-    const [cantidadGasto, setCantidadGastos] = useState("");
-    const [categoria, setCategoria] = useState("");
+    const [gastos, setGastos] = useState([]);
 
     //Calculo de presupuesto
-    const [gastos, setGastos] = useState([]);
     const [disponible, setDisponible] = useState(0);
     const [gastado, setGastado] = useState(0);
     
@@ -38,7 +35,6 @@ const ComponentePrincipal = () => {
         setGastos([...gastos, gasto])
     }
     
-
     return (
 
         <>
@@ -68,10 +64,6 @@ const ComponentePrincipal = () => {
                 setAbrirModal={setAbrirModal}
 
                 //Llamados para los campos de ingreso de datos en el modal
-                setNombreGasto={setNombreGasto}
-                setCantidadGasto={setCantidadGastos}
-                setCategoria={setCategoria}
-                cantidadGasto={cantidadGasto}
                 presupuestoGasto={presupuestoGasto}
             />
 
