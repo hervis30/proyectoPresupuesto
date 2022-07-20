@@ -3,12 +3,11 @@ import { useForm } from 'react-hook-form'
 
 const IngresoPresupuesto = ({ setPruebaPresupuesto, setIrPruebaPresupuesto }) => {
 
-    const { register, handleSubmit, formState: { errors }, reset, trigger } = useForm();
+    const { register, handleSubmit, formState: { errors }, trigger } = useForm();
     const onSubmit = (data) => {
 
         setPruebaPresupuesto(data);
         setIrPruebaPresupuesto(true);
-
 
     }
 

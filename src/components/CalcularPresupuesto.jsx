@@ -5,7 +5,6 @@ const CalcularPresupuesto = ({ pruebaPresupuesto, gastos, setDisponible, setGast
 
     //Operaciones para el presupuesto dispobile y en uso
 
-    const { cantidadGasto } = gastos;
     const { montoIngresado } = pruebaPresupuesto;
     const datoIngresado = (montoIngresado);
 

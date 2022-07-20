@@ -7,7 +7,7 @@ const Modal = ({ abrirModal, setAbrirModal,presupuestoGasto }) => {
   //Uso de biblioteca useForm para validacion
   const { register, handleSubmit, formState: { errors }, trigger } = useForm();
   const onSubmit = data => {console.log(data);
-    { presupuestoGasto(data) }
+    presupuestoGasto(data) 
     setAbrirModal(false);
   }
  
