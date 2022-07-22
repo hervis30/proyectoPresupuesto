@@ -1,9 +1,10 @@
 import React from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import ListadoGastos from './ListadoGastos';
 
 
-const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirModal, disponible, gastado }) => {
+const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirModal, disponible, gastado, gastos, irPruebaPresupuesto}) => {
 
     const { montoIngresado } = pruebaPresupuesto;
     console.log(montoIngresado);
@@ -43,6 +44,11 @@ const PlanificadorGastos = ({ pruebaPresupuesto, calcularPorcentaje, setAbrirMod
                     <button className="reset">Reset App</button>
                 </div>
             </div>
+            {irPruebaPresupuesto && ( <div className="ListadoGastos">
+                        <ListadoGastos 
+                            gastos={gastos}
+                        />
+                </div>)}
         </div>
 
     )

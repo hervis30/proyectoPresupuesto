@@ -50,6 +50,8 @@ const ComponentePrincipal = () => {
                     disponible={disponible}
                     gastado={gastado}
                     setCalcularPorcentaje={setCalcularPorcentaje}
+                    gastos={gastos}
+                    irPruebaPresupuesto={irPruebaPresupuesto}
                 />) : (<IngresoPresupuesto
                     pruebaPresupuesto={pruebaPresupuesto}
                     setPruebaPresupuesto={setPruebaPresupuesto}
