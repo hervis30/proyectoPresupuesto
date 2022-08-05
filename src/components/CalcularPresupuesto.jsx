@@ -24,7 +24,6 @@ const CalcularPresupuesto = ({ pruebaPresupuesto, gastos, setDisponible, setGast
         setGastado(presupuestoUso);
     }, [gastos])
 
-
     return (
         <div>
         </div>
